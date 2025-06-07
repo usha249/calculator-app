@@ -1,0 +1,69 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  background: #1f1f1f;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+  width: 320px;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 28px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background-color: #2d2d2d;
+  color: #fff;
+  box-shadow: inset 0 0 8px #00000066;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Specific button colors */
+button:nth-child(1) { background-color: #e74c3c; }     /* C */
+button:nth-child(2) { background-color: #9b59b6; }     /* / */
+button:nth-child(3) { background-color: #f39c12; }     /* * */
+button:nth-child(4) { background-color: #3498db; }     /* - */
+button:nth-child(8) { background-color: #1abc9c; }     /* + */
+button:nth-child(19) { background-color: #2ecc71; }    /* = */
+button:nth-child(20) { background-color: #34495e; }    /* . */
+
+button:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(8)):not(:nth-child(19)):not(:nth-child(20)) {
+  background-color: #3b3b3b;
+}
